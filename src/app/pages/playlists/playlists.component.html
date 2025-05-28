@@ -1,0 +1,12 @@
+<h2>Mis Playlists</h2>
+<ul>
+  <li *ngFor="let playlist of playlists">
+    <h3>{{ playlist.name }}</h3>
+    <p>{{ playlist.description }}</p>
+    <ul>
+      <li *ngFor="let track of playlist.tracks">
+        {{ track.title }} - {{ track.artist }} ({{ track.album }})
+      </li>
+    </ul>
+  </li>
+</ul>
